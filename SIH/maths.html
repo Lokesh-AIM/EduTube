@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathematics - EduTube</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Navbar custom button */
+    .nav-link.btn-gradient {
+      background: linear-gradient(90deg, #0d6efd, #6f42c1);
+      color: white !important;
+      border-radius: 20px;
+      padding: 6px 15px;
+      transition: all 0.3s ease-in-out;
+    }
+    .nav-link.btn-gradient:hover {
+      background: linear-gradient(90deg, #6f42c1, #0d6efd);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Gradient Hero */
+    .hero {
+      background: linear-gradient(135deg, #0d6efd, #6f42c1);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Search + Dropdown */
+    .search-section {
+      margin-top: -40px;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-control, .form-select {
+      border: 2px solid transparent;
+      border-image: linear-gradient(90deg, #0d6efd, #6f42c1) 1;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .form-control:focus, .form-select:focus {
+      box-shadow: 0 0 10px rgba(111,66,193,0.6);
+    }
+
+    /* Topic Cards */
+    .topic-card {
+      border: none;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .topic-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .topic-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    /* Quotes Section */
+    .quote-card {
+      background: linear-gradient(135deg, #0d6efd, #6f42c1);
+      color: white;
+      border-radius: 12px;
+      padding: 30px;
+      text-align: center;
+      margin: 50px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      display: none;
+    }
+    .quote-card.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #0d6efd, #6f42c1);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="index6.html">EduTube</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="science.html">Science</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active fw-bold text-primary" href="maths.html">Mathematics</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="commerce.html">Commerce</a></li>
+          <li class="nav-item">
+            <a class="nav-link btn-gradient" href="career_guidance.html" target="_blank">Career Guidance</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Mathematics</h1>
+    <p>Explore patterns, logic, and the beauty in numbers.</p>
+  </section>
+
+  <!-- Search + Dropdown -->
+  <section class="search-section">
+  <form class="row g-3 align-items-center" action="#" method="GET">
+    <div class="col-md-6">
+      <input type="search" class="form-control" placeholder="Search Maths topics..." name="query" />
+    </div>
+    <div class="col-md-4">
+      <select class="form-select" name="level">
+        <option selected>Select Level</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+    </div>
+    <div class="col-md-2">
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </div>
+  </form>
+</section>
+
+
+  <!-- Topic Cards -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-3">
+        <a href="pdfs/writing.pdf" target="_blank" class="text-decoration-none">
+        <div class="topic-card">
+          <div class="topic-icon">➗</div>
+          <h5>Arithmetic & Number Theory</h5>
+          <p>Basic operations, primes, integers & number patterns.</p>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="pdfs/writing.pdf" target="_blank" class="text-decoration-none">
+        <div class="topic-card">
+          <div class="topic-icon">📐</div>
+          <h5>Geometry</h5>
+          <p>Shapes, sizes, angles, theorems & proofs.</p>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="pdfs/writing.pdf" target="_blank" class="text-decoration-none">
+        <div class="topic-card">
+          <div class="topic-icon">📊</div>
+          <h5>Statistics & Probability</h5>
+          <p>Data, chance, distributions & uncertainty.</p>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="pdfs/writing.pdf" target="_blank" class="text-decoration-none">
+        <div class="topic-card">
+          <div class="topic-icon">🧮</div>
+          <h5>Algebra & Functions</h5>
+          <p>Expressions, equations, polynomials & transformations.</p>
+        </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section class="container">
+    <div class="quote-card active">
+      <p>“Mathematics is not about numbers, equations, computations, or algorithms: it is about understanding.” <br><strong>- William Paul Thurston</strong></p>  
+    </div>
+    <div class="quote-card">
+      <p>“Mathematics is the music of reason.” <br><strong>- James Joseph Sylvester</strong></p>
+    </div>
+    <div class="quote-card">
+      <p>“The book of nature is written in the language of mathematics.” <br><strong>- Galileo Galilei</strong></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EduTube. All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Quote auto-rotation (every 30 mins)
+    const quotes = document.querySelectorAll(".quote-card");
+    let index = 0;
+    setInterval(() => {
+      quotes[index].classList.remove("active");
+      index = (index + 1) % quotes.length;
+      quotes[index].classList.add("active");
+    }, 1800000); // 30 minutes
+
+    // For testing, you can temporarily change to 5000 (5 seconds)
+  </script>
+
+</body>
+</html>
